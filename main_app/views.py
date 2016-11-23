@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.http import HttpResponse
 
 # Create your views here.
 def index(request):
@@ -7,5 +8,8 @@ def index(request):
     context = {'treasure_name': name,'treasure_val': value }
     
     return render(request, 'index.html', context)
+
+def home(request):
+    return HttpResponse('Welcome Home Travelers!')
     
     
