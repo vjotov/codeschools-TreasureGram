@@ -6,7 +6,11 @@ def index(request):
     return render(request, 'index.html', {'treasures': treasures})
 
 def home(request):
-    return HttpResponse('Welcome Home Travelers!')
+    location_name = "Fool's Falls"
+    predators = 'Scorpions, Snakes'
+    context = {'location_name': location_name,
+               'predators': predators}
+    return render(request, 'home.html', context)
     
 
 class Treasure:
