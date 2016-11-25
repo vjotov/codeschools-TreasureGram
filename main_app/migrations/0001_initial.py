@@ -25,3 +25,9 @@ class Migration(migrations.Migration):
             ],
         ),
     ]
+#t = Treasure(name='Coffee can', value=20.00, location='Acme,CA', material='tin', img_url = 'static/images/coffee-can.png')
+#t.save()
+#t = t = Treasure(name = 'Gold Nugget', value = 500, material = 'gold', location = "Curly's Creek, NM", img_url = '/static/images/nugget.png')
+#t.save()
+#t = t = Treasure(name = "Fool's Gold", value = 0, material ='pyrite', location = "Fool's Falls, CA", img_url = '/static/images/fools-gold.png')
+#t.save()
