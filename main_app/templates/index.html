@@ -1,17 +1,7 @@
+{% extends 'base.html' %}
 {% load staticfiles %}
-<!DOCTYPE html> 
-<html>
-	<head> 
-		<link rel="stylesheet" type="text/css" href="{% static 'bootstrap.min.css' %}">
-		<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}" />
-		<title>TreasureGram</title>
-	</head>
-	<body>
-		<nav class="navbar navbar-default navbar-static-top text-center">
-			<a href="/"> 
-				<img src="{% static 'images/logo.png' %}" alt="TreasureGram" >
-			</a>
-		</nav>
+
+{% block content %}
 		<main class="container container--mw700" role="main">
 			<div class="row">
 				{% for treasure in treasures %}
@@ -35,5 +25,4 @@
 			</div>
 
 		</main>
-	</body>
-</html>
+{% endblock %}
