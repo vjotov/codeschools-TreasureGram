@@ -26,6 +26,8 @@ def datail(request, treasure_id):
 def post_treasure(request):
     form = TreasureForm(request.POST, request.FILES)
     if form.is_valid():
-        form.save(commit = True)
+        treasure = form.save(commit = False)
+        treasure.user = request.user
+        treasure.save()
 
     return HttpResponseRedirect('/')
