@@ -4,6 +4,7 @@ from django.views.static import serve
 from . import views
 
 urlpatterns = [
+    url(r'^user/(\w+)/$', views.profile, name='profile'),
     url(r'^home/$', views.home, name = 'home'),
     url(r'^$', views.index, name = 'index'),
     url(r'^([1-9])+/$', views.datail, name = 'detail'),
