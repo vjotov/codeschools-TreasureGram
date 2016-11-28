@@ -9,3 +9,7 @@ class TreasureForm(forms.ModelForm):
     # material = forms.CharField(label='Material', max_length=100)
     # location = forms.CharField(label='Location', max_length=100)
     # img_url = forms.CharField(label='Image URL', max_length=100)
+
+class LoginForm(forms.Form):
+    username = forms.CharField(label='User Name', max_length=64)
+    password = forms.CharField(widget=forms.PasswordInput())
