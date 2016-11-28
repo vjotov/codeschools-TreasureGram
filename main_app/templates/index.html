@@ -4,7 +4,7 @@
 {% block content %}
 		<main class="container container--mw700" role="main">
 			<div class="row">
-				{% for treasure in treasures %}
+                {% for treasure in treasures %}
 					<div class="col-md-4">
                         <a href="/{{treasure.id}}/" >
                             <div class="treasure panel panel-default">
@@ -23,6 +23,14 @@
 				{% endfor %}
 
 			</div>
-
+            <div class="treasure panel panel-default"> <div class="panel-heading">
+                <h3 class="panel-title">Add Treasure</h3> </div>
+                <div class="panel-body">
+                    <form action="post_url/" method="POST">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                    </form>
+                </div>
+            </div>
 		</main>
 {% endblock %}
