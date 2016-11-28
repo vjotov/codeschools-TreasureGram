@@ -26,10 +26,6 @@ def datail(request, treasure_id):
 def post_treasure(request):
     form = TreasureForm(request.POST)
     if form.is_valid():
-        treasure = Treasure(
-            name = form.cleaned_data['name'],
-            value = form.cleaned_data['value'],
-            location = form.cleaned_data['location'],
-            img_url = form.cleaned_data['img_url'])
-        treasure.save()
+        form.save(commit = True)
+
     return HttpResponseRedirect('/')
