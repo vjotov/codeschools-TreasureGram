@@ -11,7 +11,7 @@
                                 <div class="panel-heading">
                                     <h3 class="panel-title">{{ treasure.name }}</h3>
                                     <a class="panel-username"
-                                       href="/user/{{ treasure.user.username }}/">
+                                       href="{% url 'profile' treasure.user.username %}/">
                                         by: {{ treasure.user.username }}
                                     </a>
                                 </div>
@@ -20,6 +20,7 @@
                                 </div>
                             </div>
                         </a>
+                        <button class="ajax-button" data-id="{{ treasure.id}} ">{{ treasure.likes }}</button>
 					</div>
                 {% if forloop.counter|divisibleby:3 %}
                     </div><div class="row">
